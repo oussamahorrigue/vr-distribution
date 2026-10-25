@@ -222,9 +222,9 @@ export default function Home() {
       <section className="py-24 bg-brand-50/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            eyebrow="What We Export"
-            headline="Premium Indian Products"
-            subheadline="Carefully sourced from verified Indian manufacturers. Every product meets international quality standards."
+            eyebrow="What We Trade"
+            headline="Consumer Electronics Products"
+            subheadline="Brand New Products."
           />
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
             {products.map((p, i) => (
