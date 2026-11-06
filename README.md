@@ -12,11 +12,13 @@ Run `NEXT_PUBLIC_BASE_PATH=/vr-distribution npm run build`. The static site is g
 
 ## GitHub Pages
 
-In repository **Settings → Pages**, select **GitHub Actions** as the build source. Pushes to `main` run TypeScript validation, build the static site, upload it, and deploy it using `.github/workflows/pages.yml`.
+Live website: https://oussamahorrigue.github.io/vr-distribution/
 
-Expected URL: https://oussamahorrigue.github.io/vr-distribution/
+Pages is configured to serve `main` at `/`. The generated `index.html`, `.nojekyll`, assets and page directories are committed at the repository root so this source serves the website instead of rendering this README.
 
-This repository is private. GitHub Pages availability depends on the account plan. If GitHub does not allow Pages for this repository, the owner must choose a supported plan or explicitly choose to make the repository public.
+The workflow validates and builds the site, runs `node scripts/publish-static.mjs` to keep the branch export up to date, then deploys the same export with GitHub Actions. `.pages-files.json` records the generated files so obsolete build assets can be removed safely. Source files remain in `src/` and `public/`.
+
+For a local production update: `NEXT_PUBLIC_BASE_PATH=/vr-distribution npm run build`, `touch out/.nojekyll`, then `node scripts/publish-static.mjs`.
 
 ## Contact
 

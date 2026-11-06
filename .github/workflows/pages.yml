@@ -13,6 +13,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     env:
       NEXT_PUBLIC_BASE_PATH: /vr-distribution
       NEXT_TELEMETRY_DISABLED: 1
@@ -26,6 +28,16 @@ jobs:
       - run: npx tsc --noEmit
       - run: npm run build
       - run: touch out/.nojekyll
+      - name: Keep the configured Pages branch source in sync
+        run: |
+          node scripts/publish-static.mjs
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --all
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish generated GitHub Pages site [skip ci]"
+            git push origin HEAD:main
+          fi
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
