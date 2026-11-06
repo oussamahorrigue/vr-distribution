@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://fastscalingai.com/sitemap.xml
+Sitemap: https://oussamahorrigue.github.io/vr-distribution/sitemap.xml

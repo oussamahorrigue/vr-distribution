@@ -3,9 +3,9 @@ import ProductCard from "@/components/ProductCard";
 import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Export Products",
+  title: "Our Brands",
   description:
-    "Explore 11+ categories of premium Indian export products — jaggery, textiles, leather, carpets, handicrafts, spices, rice, tea, and more. Competitive pricing, quality assured.",
+    "Explore consumer electronics, IT hardware and household appliance brands available through VR Distribution in Dubai.",
 };
 import FadeIn from "@/components/FadeIn";
 import Link from "next/link";
@@ -13,75 +13,75 @@ import { ArrowRight } from "lucide-react";
 
 const products = [
   {
-    name: "amd",
+    name: "AMD",
     imageSrc: "/images/products/amd.png",
   },
   {
-    name: "asus",
+    name: "ASUS",
     imageSrc: "/images/products/asus.png",
   },
   {
-    name: "bose",
+    name: "Bose",
     imageSrc: "/images/products/bose.png",
   },
   {
-    name: "braun",
+    name: "Braun",
     imageSrc: "/images/products/braun.png",
   },
   {
-    name: "canon",
+    name: "Canon",
     imageSrc: "/images/products/canon.png",
   },
   {
-    name: "corsair",
+    name: "Corsair",
     imageSrc: "/images/products/corsair.png",
   },
   {
-    name: "delonghi",
+    name: "De’Longhi",
     imageSrc: "/images/products/delonghi.png",
   },
   {
-    name: "dji",
+    name: "DJI",
     imageSrc: "/images/products/dji.png",
   },
   {
-    name: "dyson",
+    name: "Dyson",
     imageSrc: "/images/products/dyson.png",
   },
   {
-    name: "epson",
+    name: "Epson",
     imageSrc: "/images/products/epson.png",
   },
   {
-    name: "fitbit",
+    name: "Fitbit",
     imageSrc: "/images/products/fitbit.png",
   },
   {
-    name: "fujifilm",
+    name: "Fujifilm",
     imageSrc: "/images/products/fujifilm.png",
   },
   {
-    name: "garmin",
+    name: "Garmin",
     imageSrc: "/images/products/garmin.png",
   },
   {
-    name: "gigabyte",
+    name: "Gigabyte",
     imageSrc: "/images/products/gigabyte.png",
   },
   {
-    name: "gopro",
+    name: "GoPro",
     imageSrc: "/images/products/gopro.png",
   },
   {
-    name: "hyper",
+    name: "HyperX",
     imageSrc: "/images/products/hyper.png",
   },
   {
-    name: "intel",
+    name: "Intel",
     imageSrc: "/images/products/intel.png",
   },
   {
-    name: "jabra",
+    name: "Jabra",
     imageSrc: "/images/products/jabra.png",
   },
 ];
@@ -90,17 +90,17 @@ export default function ProductsPage() {
   return (
     <>
       <PageHero
-        title="Our Products"
-        subtitle="One of the leading wholesalers of consumer electronics in the middle East"
-        imageSrc="/images/heroes/products.jpg"
+        title="The brands you know. A partner you can trust."
+        subtitle="Explore our consumer electronics and household appliance range. Contact our team for current availability, specifications and pricing."
+        imageSrc="/images/heroes/about-story.jpg"
         imageAlt="Product warehouse"
       />
 
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             {products.map((p, i) => (
-              <FadeIn key={p.name} delay={i * 0.05} className="p-8">
+              <FadeIn key={p.name} delay={i * 0.05} className="h-full">
                 <ProductCard {...p} />
               </FadeIn>
             ))}

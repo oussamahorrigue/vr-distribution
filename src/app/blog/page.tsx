@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import Image from "@/components/AssetImage";
 import PageHero from "@/components/PageHero";
 import FadeIn from "@/components/FadeIn";
 import Link from "next/link";

@@ -1,8 +1,9 @@
 'use client';
 
 export default function WhatsAppButton() {
-  const phone = '91XXXXXXXXXX'; // Replace with actual WhatsApp Business number
-  const message = encodeURIComponent('Hi, I found Fast Scaling Trade online and I am interested in your export products. Can you share more details?');
+  const phone = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '').replace(/\D/g, '');
+  if (phone.length < 8 || phone.length > 15) return null;
+  const message = encodeURIComponent('Hi, I found VR Distribution online and I am interested in your export products. Can you share more details?');
 
   return (
     <a

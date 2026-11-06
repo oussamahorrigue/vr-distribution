@@ -14,7 +14,7 @@ import {
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get a customized export quotation within 24 hours. Contact Fast Scaling Trade for product sourcing, pricing, samples, and shipping from India.",
+    "Contact VR Distribution in Dubai for consumer electronics sourcing, brand availability, pricing and international shipping.",
 };
 
 const contactInfo = [

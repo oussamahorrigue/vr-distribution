@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "Markets We Serve",
-  description: "Fast Scaling Trade ships premium products.",
+  description: "VR Distribution ships premium products.",
 };
 import FadeIn from "@/components/FadeIn";
 import SectionHeader from "@/components/SectionHeader";

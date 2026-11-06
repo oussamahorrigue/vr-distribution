@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import Image from "@/components/AssetImage";
 import { Mail, MapPin, ArrowRight } from "lucide-react";
 
 export default function Footer() {
@@ -15,7 +15,7 @@ export default function Footer() {
             <div className="mb-5">
               <Image
                 src="/logo.svg"
-                alt="Fast Scaling Trade"
+                alt="VR Distribution"
                 width={796}
                 height={344}
                 className="h-10 w-auto brightness-0 invert opacity-90"
@@ -27,7 +27,7 @@ export default function Footer() {
               Trusted by buyers across Europe, the Middle East, and beyond.
             </p>
             <a
-              href="mailto:info@fastscalingai.com"
+              href="mailto:info@vrdistribution.ae"
               className="inline-flex items-center gap-2 text-accent-400 hover:text-accent-300 text-sm transition-colors"
             >
               <Mail className="w-4 h-4" />
@@ -46,7 +46,7 @@ export default function Footer() {
                   href="/products"
                   className="hover:text-white transition-colors duration-200"
                 >
-                  Graphic &amp; cards
+                  Graphics cards
                 </Link>
               </li>
               <li>
@@ -54,7 +54,7 @@ export default function Footer() {
                   href="/products"
                   className="hover:text-white transition-colors duration-200"
                 >
-                  Cameras &amp; Garmen
+                  Cameras &amp; wearables
                 </Link>
               </li>
               <li>
@@ -70,7 +70,7 @@ export default function Footer() {
                   href="/products"
                   className="hover:text-white transition-colors duration-200"
                 >
-                  Printers &amp; Canon
+                  Printers &amp; accessories
                 </Link>
               </li>
               <li>
@@ -78,7 +78,7 @@ export default function Footer() {
                   href="/products"
                   className="hover:text-white transition-colors duration-200"
                 >
-                  Gamings
+                  Gaming
                 </Link>
               </li>
             </ul>
@@ -151,13 +151,13 @@ export default function Footer() {
                 <Mail className="w-4 h-4 mt-0.5 text-accent-500 flex-shrink-0" />
                 <div>
                   <a
-                    href="mailto:info@fastscalingai.com"
+                    href="mailto:info@vrdistribution.ae"
                     className="hover:text-white transition-colors block"
                   >
                     info@vrdistribution.ae
                   </a>
                   <a
-                    href="mailto:exports@fastscalingai.com"
+                    href="mailto:exports@vrdistribution.ae"
                     className="hover:text-white transition-colors block"
                   >
                     exports@vrdistribution.ae
@@ -173,7 +173,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/5 py-6 text-center text-xs text-brand-500">
-          &copy; {new Date().getFullYear()} Fast Scaling Trade. All rights
+          &copy; {new Date().getFullYear()} VR Distribution. All rights
           reserved.
         </div>
       </div>

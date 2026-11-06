@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Send, CheckCircle, AlertCircle, Loader2, Mail } from "lucide-react";
 
 const WEB3FORMS_KEY = "369b3cb9-af19-4377-aa93-f56ffc9d43ff";
@@ -50,11 +50,9 @@ const countries = [
 const products = [
   "IT accessories",
   "GPS Technology",
-  "IT accessories",
   "Video Microphones",
   "Fitness Watches",
-  "Camera/ Camcorders",
-  "Camera/ Camcorders",
+  "Cameras / Camcorders",
   "Gaming",
   "Wearable technology",
   "Health and Fitness",
@@ -74,6 +72,11 @@ export default function ContactForm() {
     "idle"
   );
 
+  useEffect(() => {
+    const brand = new URLSearchParams(window.location.search).get("brand");
+    if (brand) setForm(current => ({ ...current, message: `I am interested in ${brand.slice(0, 80)} products. Please share availability and pricing.` }));
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
@@ -86,10 +89,10 @@ export default function ContactForm() {
         },
         body: JSON.stringify({
           access_key: WEB3FORMS_KEY,
-          subject: `[Fast Scaling Trade] Export Inquiry: ${
+          subject: `[VR Distribution] Export Inquiry: ${
             form.product || "General"
           } from ${form.name}`,
-          from_name: "Fast Scaling Trade Website",
+          from_name: "VR Distribution Website",
           name: form.name,
           email: form.email,
           company: form.company || "Not provided",
@@ -99,7 +102,7 @@ export default function ContactForm() {
         }),
       });
       const data = await res.json();
-      if (data.success) {
+      if (res.ok && data.success) {
         setStatus("sent");
         setForm({
           name: "",
@@ -121,11 +124,12 @@ export default function ContactForm() {
     "w-full px-4 py-3.5 rounded-xl border border-brand-200 bg-white focus:ring-2 focus:ring-accent-500/20 focus:border-accent-500 outline-none transition-all duration-200 text-sm text-brand-800 placeholder:text-brand-400";
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-4" aria-label="Product inquiry">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <input
           required
           placeholder="Full Name *"
+          aria-label="Full name"
           className={inputClass}
           value={form.name}
           onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -134,18 +138,21 @@ export default function ContactForm() {
           required
           type="email"
           placeholder="Email Address *"
+          aria-label="Email address"
           className={inputClass}
           value={form.email}
           onChange={(e) => setForm({ ...form, email: e.target.value })}
         />
         <input
           placeholder="Company Name"
+          aria-label="Company name"
           className={inputClass}
           value={form.company}
           onChange={(e) => setForm({ ...form, company: e.target.value })}
         />
         <select
           className={inputClass}
+          aria-label="Country"
           value={form.country}
           onChange={(e) => setForm({ ...form, country: e.target.value })}
         >
@@ -159,6 +166,7 @@ export default function ContactForm() {
       </div>
       <select
         className={inputClass}
+        aria-label="Product of interest"
         value={form.product}
         onChange={(e) => setForm({ ...form, product: e.target.value })}
       >
@@ -170,6 +178,7 @@ export default function ContactForm() {
         ))}
       </select>
       <textarea
+        aria-label="Your requirements"
         rows={4}
         placeholder="Tell us about your requirements — products, quantities, destination, and preferred terms..."
         className={inputClass}
@@ -178,7 +187,7 @@ export default function ContactForm() {
       />
 
       {status === "sent" ? (
-        <div className="flex items-center gap-3 bg-accent-50 text-accent-800 p-4 rounded-xl border border-accent-200">
+        <div role="status" className="flex items-center gap-3 bg-accent-50 text-accent-800 p-4 rounded-xl border border-accent-200">
           <CheckCircle className="w-5 h-5 flex-shrink-0 text-accent-600" />
           <div>
             <span className="text-sm font-medium block">
@@ -209,7 +218,7 @@ export default function ContactForm() {
         </button>
       )}
       {status === "error" && (
-        <div className="flex items-center gap-3 bg-rose-50 text-rose-600 p-4 rounded-xl border border-rose-200">
+        <div role="alert" className="flex items-center gap-3 bg-rose-50 text-rose-600 p-4 rounded-xl border border-rose-200">
           <AlertCircle className="w-5 h-5 flex-shrink-0" />
           <span className="text-sm font-medium">
             Failed to send. Please email us directly at
@@ -222,7 +231,7 @@ export default function ContactForm() {
         <span>
           Or email us directly at{" "}
           <a
-            href="mailto:exports@fastscalingai.com"
+            href="mailto:exports@vrdistribution.ae"
             className="text-accent-600 hover:underline"
           >
             exports@vrdistribution.ae

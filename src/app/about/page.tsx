@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import Image from "@/components/AssetImage";
 import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Fast Scaling Trade — a Delhi-based export company connecting international buyers with verified Indian manufacturers across 11+ product categories.",
+    "Meet VR Distribution, a Dubai-based sourcing partner for consumer electronics, IT components and international distribution.",
 };
 import FadeIn from "@/components/FadeIn";
 import SectionHeader from "@/components/SectionHeader";
 import { Handshake, ShieldCheck, Globe, Truck } from "lucide-react";
 
 const milestones = [
-  { year: "2019", event: "Fast Scaling Trade founded in dubai, UAE" },
+  { year: "2019", event: "VR Distribution founded in dubai, UAE" },
   { year: "2021", event: "First export shipment to europe" },
   { year: "2024", event: "Registered with Export Promotion Councils (RCMC)" },
   { year: "2025", event: "Expanded to Austria, Poland, and UAE markets" },
@@ -28,13 +28,13 @@ const values = [
   },
   {
     title: "Quality Assured",
-    desc: "Every product undergoes pre-shipment inspection. We work only with verified Indian manufacturers who meet international quality standards.",
+    desc: "Every product undergoes pre-shipment inspection. We work only with our sourcing partners who meet international quality standards.",
     icon: ShieldCheck,
     color: "bg-emerald-50 text-emerald-600",
   },
   {
     title: "Global Reach",
-    desc: "We serve buyers across Africa, the Middle East, the UK, and Asia. Wherever you are, we deliver Indian products to your port.",
+    desc: "We serve buyers across Africa, the Middle East, the UK, and Asia. Wherever you are, we deliver products to your port.",
     icon: Globe,
     color: "bg-sky-50 text-sky-600",
   },
@@ -85,7 +85,7 @@ export default function AboutPage() {
               <div className="relative rounded-2xl overflow-hidden h-[440px]">
                 <Image
                   src="/images/heroes/about-story.jpg"
-                  alt="Indian products and manufacturing"
+                  alt="Warehouse and distribution operations"
                   fill
                   className="object-cover"
                   unoptimized
