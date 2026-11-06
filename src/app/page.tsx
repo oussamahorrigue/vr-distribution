@@ -16,6 +16,7 @@ import {
   Users,
   Clock,
   Calendar,
+  Tablet
 } from "lucide-react";
 
 const stats = [
@@ -27,89 +28,85 @@ const stats = [
 
 const products = [
   {
-    name: "amd",
+    name: "Tablets",
     desc: "Organic blocks & powder",
-    image: "/images/products/amd.png",
+    image: "/images/products/tablet.svg",
   },
   {
-    name: "asus",
+    name: "Monitors",
     desc: "Cotton fabrics & garments",
-    image: "/images/products/asus.png",
+    image: "/images/products/monitor.svg",
   },
   {
-    name: "bose",
+    name: "workstations",
     desc: "Premium leather goods",
-    image: "/images/products/bose.png",
+    image: "/images/products/workstation.svg",
   },
   {
-    name: "braun",
+    name: "Gaming",
     desc: "Handwoven carpets & rugs",
-    image: "/images/products/braun.png",
+    image: "/images/products/gaming.svg",
   },
   {
-    name: "canon",
+    name: "printers",
     desc: "Artisan crafted products",
-    image: "/images/products/canon.png",
+    image: "/images/products/printer.svg",
   },
   {
-    name: "corsair",
+    name: "Cameras",
     desc: "Premium Indian spices",
-    image: "/images/products/corsair.png",
+    image: "/images/products/camera.svg",
   },
   {
-    name: "delonghi",
+    name: "Headphones and Headsets",
     desc: "Premium Indian spices",
-    image: "/images/products/delonghi.png",
+    image: "/images/products/headphones.svg",
   },
   {
-    name: "dji",
+    name: "SSD and HDD drives",
     desc: "Premium Indian spices",
-    image: "/images/products/dji.png",
+    image: "/images/products/hard-drive.svg",
   },
   {
-    name: "dyson",
+    name: "CPUs",
     desc: "Premium Indian spices",
-    image: "/images/products/dyson.png",
+    image: "/images/products/cpu.svg",
   },
   {
-    name: "epson",
+    name: "Ai Hardware",
     desc: "Premium Indian spices",
-    image: "/images/products/epson.png",
+    image: "/images/products/cpu-ai.svg",
   },
   {
-    name: "fitbit",
+    name: "IT components",
     desc: "Premium Indian spices",
-    image: "/images/products/fitbit.png",
+    image: "/images/products/gpu.svg",
   },
   {
-    name: "fujifilm",
+    name: "Watches",
     desc: "Premium Indian spices",
-    image: "/images/products/fujifilm.png",
+    image: "/images/products/watch.svg",
   },
-  {
-    name: "garmin",
-    desc: "Premium Indian spices",
-    image: "/images/products/garmin.png",
-  },
+  
 ];
 
 const process = [
   {
     step: "01",
     title: "Share Requirements",
-    desc: "Tell us what products you need, quantities, and target market.",
+    desc: "Transparency, efficiency and long-term development",
     icon: MessageSquare,
   },
   {
     step: "02",
     title: "Get Quotation",
-    desc: "Receive a detailed quote with pricing, MOQ, and shipping terms within 24 hours.",
+    desc: "A strong international network of contacts and deep market knowledge",
     icon: FileText,
   },
   {
     step: "03",
     title: "Confirm & Ship",
-    desc: "Approve the order, we handle sourcing, quality checks, and shipping to your port.",
+    desc: "Worldwide shipping, hassle-free logistics, and personalized customer service",
     icon: Truck,
   },
 ];
@@ -228,20 +225,24 @@ export default function Home() {
           />
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
             {products.map((p, i) => (
-              <FadeIn key={p.name} delay={i * 0.07}>
-                <Link
-                  href="/products"
+              <FadeIn key={p.name} delay={i * 0.07} className="">
+                <div
+                  
                   className="group relative h-56 md:h-72 rounded-2xl overflow-hidden block"
                 >
                   <Image
                     src={p.image}
                     alt={p.name}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="group-hover:scale-105 transition-transform duration-700 p-10"
                     unoptimized
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-brand-950/20 to-transparent" />
-                </Link>
+                   <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
+                    <h3 className="font-display font-bold text-white text-lg md:text-xl">{p.name}</h3>
+                   
+                  </div>
+                </div>
               </FadeIn>
             ))}
           </div>
@@ -334,7 +335,7 @@ export default function Home() {
             <h2 className="font-display text-4xl md:text-6xl font-bold text-white mb-5">
               Start Sourcing from
               <br />
-              <span className="gradient-text">VR Today</span>
+              <span className="gradient-text">VR Distribution Today</span>
             </h2>
           </FadeIn>
           <FadeIn delay={0.1}>

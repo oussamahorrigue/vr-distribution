@@ -5,25 +5,7 @@ import { Mail, MapPin, ArrowRight } from "lucide-react";
 export default function Footer() {
   return (
     <footer>
-      {/* CTA Strip */}
-      <section className="relative overflow-hidden bg-brand-900">
-        <div className="absolute inset-0 mesh-gradient opacity-40" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h3 className="font-display text-3xl md:text-4xl font-bold text-white mb-3">
-            Ready to Source Electronics Products?
-          </h3>
-          <p className="text-brand-400 text-lg mb-8 max-w-2xl mx-auto">
-            Get a customized quotation within 24 hours. No spam, no pressure.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-accent-500 text-white font-semibold px-8 py-3.5 rounded-full hover:bg-accent-400 hover:shadow-glow transition-all duration-300 group"
-          >
-            Get Your Free Quote
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </div>
-      </section>
+
 
       {/* Main Footer */}
       <div className="bg-brand-950 text-brand-400">
