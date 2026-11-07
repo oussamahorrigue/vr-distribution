@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "@/components/AssetImage";
+import BrandMarquee from "@/components/BrandMarquee";
 import { ArrowRight, ArrowUpRight, Globe2, Truck, CheckCircle2, Tablet, Monitor, PcCase, Gamepad2, Printer, Camera, Headphones, HardDrive, Cpu, CircuitBoard, Watch, MessagesSquare, FileCheck2, PackageCheck } from "lucide-react";
 
 const categories = [
@@ -46,7 +47,7 @@ export default function Home() {
 
     <section className="brand-strip" aria-label="Featured brands">
       <div className="site-shell"><p className="eyebrow text-center">A WORLD OF BRANDS. ONE SOURCING PARTNER.</p>
-        <div className="brand-row">{["asus", "canon", "bose", "intel", "dyson", "garmin"].map(brand => <Image key={brand} src={`/images/products/${brand}.png`} alt={brand.toUpperCase()} width={140} height={140} sizes="140px" className="brand-logo" />)}</div>
+        <BrandMarquee />
       </div>
     </section>
 

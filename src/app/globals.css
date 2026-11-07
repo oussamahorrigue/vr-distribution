@@ -263,3 +263,27 @@ html { scroll-padding-top: 110px; }
 }
 
 .cta-section .eyebrow { color: #5eead4; }
+
+.brand-marquee-wrapper { position: relative; padding-bottom: 22px; }
+.brand-marquee { overflow: hidden; mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent); }
+.brand-marquee-track { display: flex; width: max-content; animation: brand-scroll 30s linear infinite; }
+.brand-marquee-group { display: flex; flex-shrink: 0; align-items: center; gap: 36px; padding-right: 36px; }
+.brand-marquee-item { flex: 0 0 176px; display: flex; justify-content: center; }
+.brand-marquee .brand-logo { width: 140px; height: 100px; object-fit: contain; }
+.brand-marquee:hover .brand-marquee-track,
+.brand-marquee.is-paused .brand-marquee-track { animation-play-state: paused; }
+.brand-motion-toggle { display: inline-flex; align-items: center; gap: 5px; position: absolute; right: 0; bottom: 0; padding: 3px 7px; border-radius: 4px; color: #64748b; font-size: 10px; }
+.brand-motion-toggle:hover { color: #0f766e; background: #f0fdfa; }
+@keyframes brand-scroll { to { transform: translateX(-50%); } }
+@media (max-width: 767px) {
+  .brand-marquee-group { gap: 24px; padding-right: 24px; }
+  .brand-marquee-item { flex-basis: 120px; }
+  .brand-marquee .brand-logo { width: 120px; height: 90px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-marquee { mask-image: none; }
+  .brand-marquee-track { animation: none; width: 100%; }
+  .brand-marquee-group { width: 100%; justify-content: center; flex-wrap: wrap; gap: 8px; padding-right: 0; }
+  .brand-marquee-group[aria-hidden="true"], .brand-motion-toggle { display: none; }
+  .brand-marquee-wrapper { padding-bottom: 0; }
+}
