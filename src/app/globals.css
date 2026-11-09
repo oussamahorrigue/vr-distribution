@@ -266,9 +266,9 @@ html { scroll-padding-top: 110px; }
 
 .brand-marquee-wrapper { position: relative; padding-bottom: 22px; }
 .brand-marquee { overflow: hidden; mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent); }
-.brand-marquee-track { display: flex; width: max-content; animation: brand-scroll 30s linear infinite; }
+.brand-marquee-track { display: flex; width: max-content; animation: brand-scroll 155s linear infinite; }
 .brand-marquee-group { display: flex; flex-shrink: 0; align-items: center; gap: 36px; padding-right: 36px; }
-.brand-marquee-item { flex: 0 0 176px; display: flex; justify-content: center; }
+.brand-marquee-item { flex: 0 0 176px; display: flex; align-items: center; justify-content: center; }
 .brand-marquee .brand-logo { width: 140px; height: 100px; object-fit: contain; }
 .brand-marquee:hover .brand-marquee-track,
 .brand-marquee.is-paused .brand-marquee-track { animation-play-state: paused; }

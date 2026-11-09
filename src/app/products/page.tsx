@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ProductCard from "@/components/ProductCard";
+import { brands } from "@/lib/brands";
 import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
@@ -9,96 +10,9 @@ export const metadata: Metadata = {
 };
 import FadeIn from "@/components/FadeIn";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Plus } from "lucide-react";
 
-const products = [
-  { name: "NVIDIA", imageSrc: "/images/products/nvidia.svg" },
-  { name: "HP", imageSrc: "/images/products/hp.svg" },
-  { name: "Lenovo", imageSrc: "/images/products/lenovo.svg" },
-  { name: "Microsoft", imageSrc: "/images/products/microsoft.svg" },
-  { name: "Meta", imageSrc: "/images/products/meta.svg" },
-  { name: "Nintendo", imageSrc: "/images/products/nintendo.svg" },
-  { name: "Dell", imageSrc: "/images/products/dell.svg" },
-  { name: "Samsung", imageSrc: "/images/products/samsung.svg" },
-  { name: "Sony", imageSrc: "/images/products/sony.svg" },
-  { name: "Philips", imageSrc: "/images/products/philips.svg" },
-  { name: "Logitech", imageSrc: "/images/products/logitech.svg" },
-  { name: "JBL", imageSrc: "/images/products/jbl.svg" },
-  { name: "Ninja", imageSrc: "/images/products/ninja.png" },
 
-  {
-    name: "AMD",
-    imageSrc: "/images/products/amd.png",
-  },
-  {
-    name: "ASUS",
-    imageSrc: "/images/products/asus.png",
-  },
-  {
-    name: "Bose",
-    imageSrc: "/images/products/bose.png",
-  },
-  {
-    name: "Braun",
-    imageSrc: "/images/products/braun.png",
-  },
-  {
-    name: "Canon",
-    imageSrc: "/images/products/canon.png",
-  },
-  {
-    name: "Corsair",
-    imageSrc: "/images/products/corsair.png",
-  },
-  {
-    name: "De’Longhi",
-    imageSrc: "/images/products/delonghi.png",
-  },
-  {
-    name: "DJI",
-    imageSrc: "/images/products/dji.png",
-  },
-  {
-    name: "Dyson",
-    imageSrc: "/images/products/dyson.png",
-  },
-  {
-    name: "Epson",
-    imageSrc: "/images/products/epson.png",
-  },
-  {
-    name: "Fitbit",
-    imageSrc: "/images/products/fitbit.png",
-  },
-  {
-    name: "Fujifilm",
-    imageSrc: "/images/products/fujifilm.png",
-  },
-  {
-    name: "Garmin",
-    imageSrc: "/images/products/garmin.png",
-  },
-  {
-    name: "Gigabyte",
-    imageSrc: "/images/products/gigabyte.png",
-  },
-  {
-    name: "GoPro",
-    imageSrc: "/images/products/gopro.png",
-  },
-  {
-    name: "HyperX",
-    imageSrc: "/images/products/hyper.png",
-  },
-  {
-    name: "Intel",
-    imageSrc: "/images/products/intel.png",
-  },
-  {
-    name: "Jabra",
-    imageSrc: "/images/products/jabra.png",
-  },
-];
 
 export default function ProductsPage() {
   return (
@@ -113,11 +27,18 @@ export default function ProductsPage() {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            {products.map((p, i) => (
+            {brands.map((p, i) => (
               <FadeIn key={p.name} delay={i * 0.05} className="h-full">
                 <ProductCard {...p} />
               </FadeIn>
             ))}
+            <article className="brand-card bg-accent-50/50 border-accent-100">
+              <div className="brand-card-image flex-col gap-3 p-5 text-center">
+                <div className="rounded-full bg-accent-100 p-4 text-accent-700"><Plus className="w-9 h-9" strokeWidth={1.5} aria-hidden="true" /></div>
+                <p className="text-xs text-brand-600 leading-relaxed max-w-[180px]">We source and trade many other brands, too.</p>
+              </div>
+              <div className="brand-card-label"><h2>And many more</h2></div>
+            </article>
           </div>
         </div>
       </section>
