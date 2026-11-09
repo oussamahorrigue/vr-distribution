@@ -11,8 +11,16 @@ export const metadata: Metadata = {
   metadataBase: new URL(origin),
   openGraph: { title: 'VR Distribution', description: 'Leading brands. Global reach. Your next move.', url: `${origin}${basePath}/`, siteName: 'VR Distribution', type: 'website', images: [{url: `${basePath}/og-image.jpg`, width:1200, height:630, alt:'VR Distribution'}] },
   twitter: {card:'summary_large_image', title:'VR Distribution', images:[`${basePath}/og-image.jpg`]},
-  icons: { icon: `${basePath}/favicon.ico`, apple: `${basePath}/apple-touch-icon.png` },
-  manifest: `${basePath}/site.webmanifest`,
+  icons: {
+    icon: [
+      { url: `${basePath}/favicon.ico?v=header-v2`, sizes: '16x16 32x32 48x48' },
+      { url: `${basePath}/favicon-16x16.png?v=header-v2`, sizes: '16x16', type: 'image/png' },
+      { url: `${basePath}/favicon-32x32.png?v=header-v2`, sizes: '32x32', type: 'image/png' },
+      { url: `${basePath}/favicon.svg?v=header-v2`, sizes: 'any', type: 'image/svg+xml' },
+    ],
+    apple: { url: `${basePath}/apple-touch-icon.png?v=header-v2`, sizes: '180x180', type: 'image/png' },
+  },
+  manifest: `${basePath}/site.webmanifest?v=header-v2`,
 };
 const jsonLd = {'@context':'https://schema.org','@type':'Organization',name:'VR Distribution',url:`${origin}${basePath}/`,logo:`${origin}${basePath}/logo.svg`,email:'info@vrdistribution.ae',address:{'@type':'PostalAddress',addressLocality:'Dubai',addressCountry:'AE'}};
 export default function RootLayout({children}:{children:React.ReactNode}) {
