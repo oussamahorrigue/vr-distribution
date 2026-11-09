@@ -1,6 +1,6 @@
-import Link from "next/link";
 import Image from "@/components/AssetImage";
-import { Mail, MapPin, ArrowRight } from "lucide-react";
+import { Mail, MapPin, ArrowUpRight } from "lucide-react";
+import { office } from "@/lib/office";
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
 
       {/* Main Footer */}
       <div className="bg-brand-950 text-brand-400">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* Brand */}
           <div className="md:col-span-2 lg:col-span-1">
             <div className="mb-5">
@@ -35,112 +35,6 @@ export default function Footer() {
             </a>
           </div>
 
-          {/* Products */}
-          <div>
-            <h4 className="text-white font-semibold mb-5 text-xs uppercase tracking-[0.2em]">
-              Products
-            </h4>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <Link
-                  href="/products"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  Graphics cards
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/products"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  Cameras &amp; wearables
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/products"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  IT Components
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/products"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  Printers &amp; accessories
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/products"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  Gaming
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Markets */}
-          <div>
-            <h4 className="text-white font-semibold mb-5 text-xs uppercase tracking-[0.2em]">
-              Markets
-            </h4>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <Link
-                  href="/markets"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  United States
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/markets"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  France
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/markets"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  Poland
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/markets"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  UAE
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/markets"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  United Kingdom
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/markets"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  China
-                </Link>
-              </li>
-            </ul>
-          </div>
-
           {/* Contact */}
           <div>
             <h4 className="text-white font-semibold mb-5 text-xs uppercase tracking-[0.2em]">
@@ -164,11 +58,18 @@ export default function Footer() {
                   </a>
                 </div>
               </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 mt-0.5 text-accent-500 flex-shrink-0" />
-                <span>Dubai, UAE</span>
-              </li>
+
             </ul>
+          </div>
+          <div>
+            <h4 className="text-white font-semibold mb-5 text-xs uppercase tracking-[0.2em]">Office Address</h4>
+            <div className="flex items-start gap-3 text-sm">
+              <MapPin className="w-4 h-4 mt-0.5 text-accent-500 flex-shrink-0" aria-hidden="true" />
+              <div>
+                <address className="not-italic leading-relaxed">{office.address}</address>
+                <a href={office.mapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4 text-accent-400 hover:text-accent-300">Get directions <ArrowUpRight className="w-4 h-4" aria-hidden="true" /></a>
+              </div>
+            </div>
           </div>
         </div>
 

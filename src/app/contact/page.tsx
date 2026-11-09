@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 import PageHero from "@/components/PageHero";
 import FadeIn from "@/components/FadeIn";
+import { office } from "@/lib/office";
 import {
   Mail,
   Package,
@@ -30,7 +31,7 @@ const contactInfo = [
     value: "exports@vrdistribution.ae",
     link: "mailto:exports@vrdistribution.ae",
   },
-  { icon: MapPin, label: "Office", value: "Dubai, UAE", link: null },
+  { icon: MapPin, label: "Office", value: office.address, link: office.mapsUrl },
   { icon: Clock, label: "Response Time", value: "Within 24 hours", link: null },
 ];
 
@@ -135,6 +136,21 @@ export default function ContactPage() {
                 </div>
               </FadeIn>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="pb-20 md:pb-24" aria-labelledby="office-map-title">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-2xl overflow-hidden border border-brand-200 bg-brand-50">
+            <div className="p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+              <div>
+                <h2 id="office-map-title" className="font-display text-2xl font-bold text-brand-900">Visit Our Office</h2>
+                <address className="not-italic text-sm text-brand-600 leading-relaxed mt-3 max-w-lg">{office.address}</address>
+              </div>
+              <a href={office.mapsUrl} target="_blank" rel="noopener noreferrer" className="button-primary self-start md:self-center">Open in Google Maps <MapPin className="w-4 h-4" aria-hidden="true" /></a>
+            </div>
+            <iframe src={office.embedUrl} title="VR Distribution office map — HDS Tower, Cluster F, Dubai" className="w-full h-[320px] md:h-[440px] border-0" loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade" />
           </div>
         </div>
       </section>
