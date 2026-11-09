@@ -16,9 +16,9 @@ export default function Footer() {
               <Image
                 src="/logo.svg"
                 alt="VR Distribution"
-                width={796}
-                height={344}
-                className="h-10 w-auto brightness-0 invert opacity-90"
+                width={215}
+                height={80}
+                className="w-[130px] sm:w-[145px] h-auto max-w-full brightness-0 invert opacity-90"
                 unoptimized
               />
             </div>

@@ -1,7 +1,7 @@
 'use client';
 
 export default function WhatsAppButton() {
-  const phone = '97145690063';
+  const phone = '971553175826';
   const message = encodeURIComponent('Hi, I found VR Distribution online and I am interested in your export products. Can you share more details?');
 
   return (

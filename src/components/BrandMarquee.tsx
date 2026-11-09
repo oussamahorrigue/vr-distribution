@@ -17,7 +17,7 @@ export default function BrandMarquee() {
             <div className="brand-marquee-group" key={String(duplicate)} aria-hidden={duplicate || undefined}>
               {brands.map(brand => (
                 <div className="brand-marquee-item" key={brand.name}>
-                  <Image src={brand.imageSrc} alt={duplicate ? "" : brand.name} width={140} height={140} sizes="140px" className="brand-logo" style={brand.imageSrc.endsWith(".svg") || brand.name === "Ninja" ? { width: 100, height: 60 } : undefined} />
+                  <Image src={brand.imageSrc} alt={duplicate ? "" : brand.name} width={140} height={140} sizes="140px" loading="eager" className="brand-logo" style={brand.imageSrc.endsWith(".svg") || brand.name === "Ninja" ? { width: 100, height: 60 } : undefined} />
                 </div>
               ))}
             </div>
