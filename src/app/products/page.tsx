@@ -12,6 +12,20 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const products = [
+  { name: "NVIDIA", imageSrc: "/images/products/nvidia.svg" },
+  { name: "HP", imageSrc: "/images/products/hp.svg" },
+  { name: "Lenovo", imageSrc: "/images/products/lenovo.svg" },
+  { name: "Microsoft", imageSrc: "/images/products/microsoft.svg" },
+  { name: "Meta", imageSrc: "/images/products/meta.svg" },
+  { name: "Nintendo", imageSrc: "/images/products/nintendo.svg" },
+  { name: "Dell", imageSrc: "/images/products/dell.svg" },
+  { name: "Samsung", imageSrc: "/images/products/samsung.svg" },
+  { name: "Sony", imageSrc: "/images/products/sony.svg" },
+  { name: "Philips", imageSrc: "/images/products/philips.svg" },
+  { name: "Logitech", imageSrc: "/images/products/logitech.svg" },
+  { name: "JBL", imageSrc: "/images/products/jbl.svg" },
+  { name: "Ninja", imageSrc: "/images/products/ninja.png" },
+
   {
     name: "AMD",
     imageSrc: "/images/products/amd.png",

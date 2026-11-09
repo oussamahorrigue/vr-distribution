@@ -189,7 +189,7 @@ h1,h2,h3 { letter-spacing: -.045em; }
 .page-subtitle { color: #64748b; font-size: 15px; line-height: 1.9; margin-top: 22px; max-width: 450px; }
 .page-hero-photo { height: 320px; border-radius: 6px; position: relative; overflow: hidden; }
 .brand-card { display: flex; flex-direction: column; height: 100%; border: 1px solid #e2e8f0; border-radius: 6px; background: white; overflow: hidden; transition: border-color .2s,transform .2s; }
-.brand-card:hover { transform: translateY(-3px); border-color: #0d9488; }
+
 .brand-card-image { display: flex; align-items: center; justify-content: center; min-height: 190px; padding: 5px; }
 .brand-card-image img { width: 180px; height: 180px; max-width: 100%; }
 .brand-card-label { border-top: 1px solid #f1f5f9; display: flex; align-items: center; justify-content: space-between; padding: 18px; gap: 10px; }
