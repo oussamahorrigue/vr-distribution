@@ -22,7 +22,7 @@ For a local production update: `NEXT_PUBLIC_BASE_PATH=/vr-distribution npm run b
 
 ## Contact
 
-The existing contact form submits directly to Web3Forms. Its existing public access key is retained; delivery depends on the configured Web3Forms account. No server API route is needed on Pages. Contact email links use the existing `vrdistribution.ae` addresses.
+The existing contact form submits directly to Web3Forms. Its existing public access key is retained; delivery depends on the configured Web3Forms account. No server API route is needed on Pages. The sole public contact email is `sales@vr-international.ae`.
 
 ## Presentation changes
 

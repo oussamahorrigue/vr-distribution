@@ -222,7 +222,7 @@ export default function ContactForm() {
           <AlertCircle className="w-5 h-5 flex-shrink-0" />
           <span className="text-sm font-medium">
             Failed to send. Please email us directly at
-            exports@vrdistribution.ae
+            sales@vr-international.ae
           </span>
         </div>
       )}
@@ -231,10 +231,10 @@ export default function ContactForm() {
         <span>
           Or email us directly at{" "}
           <a
-            href="mailto:exports@vrdistribution.ae"
+            href="mailto:sales@vr-international.ae"
             className="text-accent-600 hover:underline"
           >
-            exports@vrdistribution.ae
+            sales@vr-international.ae
           </a>
         </span>
       </div>

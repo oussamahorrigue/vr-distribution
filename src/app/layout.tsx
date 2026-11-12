@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   manifest: `${basePath}/site.webmanifest?v=header-v2`,
 };
-const jsonLd = {'@context':'https://schema.org','@type':'Organization',name:'VR Distribution',url:`${origin}${basePath}/`,logo:`${origin}${basePath}/logo.svg`,email:'info@vrdistribution.ae',address:{'@type':'PostalAddress',addressLocality:'Dubai',addressCountry:'AE'}};
+const jsonLd = {'@context':'https://schema.org','@type':'Organization',name:'VR Distribution',url:`${origin}${basePath}/`,logo:`${origin}${basePath}/logo.svg`,email:'sales@vr-international.ae',address:{'@type':'PostalAddress',addressLocality:'Dubai',addressCountry:'AE'}};
 export default function RootLayout({children}:{children:React.ReactNode}) {
   return <html lang="en"><body className="min-h-screen flex flex-col font-sans"><a href="#main-content" className="skip-link">Skip to content</a><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(jsonLd)}} /><Navbar /><main id="main-content" className="flex-1">{children}</main><Footer /><WhatsAppButton /></body></html>;
 }

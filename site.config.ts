@@ -19,8 +19,8 @@ const siteConfig = {
 
   // ─── Contact ────────────────────────────────────────────
   emails: {
-    general: 'info@fastscalingai.com',
-    exports: 'exports@fastscalingai.com',
+    general: 'sales@vr-international.ae',
+    exports: 'sales@vr-international.ae',
   },
   whatsapp: '91XXXXXXXXXX', // Replace with actual WhatsApp Business number (with country code, no +)
   web3formsKey: '369b3cb9-af19-4377-aa93-f56ffc9d43ff', // Get yours free at https://web3forms.com

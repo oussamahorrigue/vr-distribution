@@ -27,11 +27,11 @@ export default function Footer() {
               Trusted by buyers across Europe, the Middle East, and beyond.
             </p>
             <a
-              href="mailto:info@vrdistribution.ae"
+              href="mailto:sales@vr-international.ae"
               className="inline-flex items-center gap-2 text-accent-400 hover:text-accent-300 text-sm transition-colors"
             >
               <Mail className="w-4 h-4" />
-              info@vrdistribution.ae
+              sales@vr-international.ae
             </a>
           </div>
 
@@ -44,17 +44,12 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Mail className="w-4 h-4 mt-0.5 text-accent-500 flex-shrink-0" />
                 <div>
+
                   <a
-                    href="mailto:info@vrdistribution.ae"
+                    href="mailto:sales@vr-international.ae"
                     className="hover:text-white transition-colors block"
                   >
-                    info@vrdistribution.ae
-                  </a>
-                  <a
-                    href="mailto:exports@vrdistribution.ae"
-                    className="hover:text-white transition-colors block"
-                  >
-                    exports@vrdistribution.ae
+                    sales@vr-international.ae
                   </a>
                 </div>
               </li>

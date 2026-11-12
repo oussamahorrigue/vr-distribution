@@ -5,7 +5,6 @@ import FadeIn from "@/components/FadeIn";
 import { office } from "@/lib/office";
 import {
   Mail,
-  Package,
   MapPin,
   Clock,
   CheckCircle2,
@@ -21,15 +20,9 @@ export const metadata: Metadata = {
 const contactInfo = [
   {
     icon: Mail,
-    label: "General Inquiries",
-    value: "info@vrdistribution.ae",
-    link: "mailto:info@vrdistribution.ae",
-  },
-  {
-    icon: Package,
-    label: "Export & Sales",
-    value: "exports@vrdistribution.ae",
-    link: "mailto:exports@vrdistribution.ae",
+    label: "Sales & Inquiries",
+    value: "sales@vr-international.ae",
+    link: "mailto:sales@vr-international.ae",
   },
   { icon: MapPin, label: "Office", value: office.address, link: office.mapsUrl },
   { icon: Clock, label: "Response Time", value: "Within 24 hours", link: null },
